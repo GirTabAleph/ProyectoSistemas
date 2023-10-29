@@ -1,0 +1,124 @@
+'Este archivo contiene en texto plano el código necesario para generar el diagrama de clases del sistema.
+
+@startuml
+header "Diagrama de clases. Equipo The Gitbrothers"
+
+'Un módulo para raspberry pi tiene estos tres modos. Los tomaremos como referencia.
+enum TipoDeLectura{
+
+LECTOR
+P2P
+EMULACION_DE_TARJETA
+
+}
+
+interface ITarjeta{
+
+long idNFC
+
+}
+
+
+'Esta clase técnicamente es protegida porque solo ciertas clases pueden acceder a ella, no todas las clases deben accederla.
+class Tarjeta{ 
+
+idNFC
+
+}
+
++class LectorTarjeta{
+
+tipoDeLectura tipoActual
+
+'Métodos.
+LeerNFCTarjeta()
+
+}
+
++class Persona{
+
+String nombre
+String escolaridad
+int edad
+
+}
+
++class Alumno{
+
+int numeroMatricula
+int gruposInscritos
+String eMail
+Tarjeta tarjetaAsociada
+
+'Métodos.
+PasarTarjetaAsistencia()
+
+}
+
++class Profesor{
+
+int numGruposAsociados
+int claveProfesor
+String materiasAsociadasAGrupos
+
+'Métodos.
+AltaAlumno(Alumno)
+BajaAlumno()
+CambioAlumno(Alumno)
+AltaGrupo(Grupo)
+BajaGrupo()
+CambioGrupo(Grupo)
+
+}
+
++class Grupo{
+
+int numAlumnos
+int idGrupo
+String materia
+Alumno[] alumnos
+
+}
+
+class SistemaAsistencias{
+
+Alumno[] alumnos
+Grupo[] grupos
+
+'Métodos.
+RegistrarAsistenciaAlumno()
+GenerarInformePorTiempo()
+ExportarInforme()
+
+}
+
+'Privado porque solo el profesor interactúa con él.
+-class Informe{
+
+Alumno[] alumnos
+int aistenciasDeAlumno
+Grupo[] grupos
+
+}
+
+'Relaciones.
+TipoDeLectura <-- LectorTarjeta
+
+Tarjeta ..|> ITarjeta
+
+
+'Para este sistema un alumno solo puede tener una tarjeta a menos que deba hacer el reemplazo.
+Alumno -- Tarjeta: 1
+
+Tarjeta -- LectorTarjeta
+
+Profesor --|> Persona
+Alumno --|> Persona
+
+'Un cambio en la clase grupo afecta a la clase reporte, por eso es una dependencia.
+Grupo <.. Informe
+
+Alumno --o Grupo: 1 .. *
+
+SistemaAsistencias -- Informe
+@enduml
