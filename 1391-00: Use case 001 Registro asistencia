@@ -1,0 +1,40 @@
+Use Case Name: Registro de asistencias
+ID: 001
+Nivel de Importancia: media
+Actor Primario: Profesor		
+Tipo de Caso de Uso: Esencial
+
+Actores secundarios
+Sistema de asistencias: encargado de registrar la asistencia de los profesores 
+Alumno: puede registrar su asistencia como el profesor
+
+Breve Descripción: El caso de uso describe como el usuario (alumno/profesor) puede registrar su asistencia en el sistema a través de su tarjeta de movilidad integrada de la cdmx en tiempo real.
+
+Precondiciones: el usuario (alumno/profesor) debe estar dado de alta en el sistema.
+El usuario (alumno/profesor) debe contar con una tarjeta de movilidad integrada de la cdmx
+
+Flujo básico de eventos: 
+1.	El usuario va al lector y verifica que tenga su tarjeta de movilidad integrada de la CDMX
+2.	El usuario pasa la tarjeta por el lector
+3.	El sistema utiliza el lector para leer y verificar la información del usuario
+4.	El sistema valida la información 
+5.	Se registra la asistencia 
+
+Flujo alternativo:
+El usuario no cuenta con tarjeta. (Este caso de uso empieza desde el paso 1 del flujo básico).
+2. El usuario no tiene su tarjeta de movilidad 
+3. El usuario debe comprar en alguna estación de metro o Metrobús una nueva tarjeta 
+4. El usuario debe ir a la escuela y dar de alta su nueva tarjeta.
+	4.1 si es un alumno debe pedir al profesor que le de el alta en el sistema.
+
+El usuario no está dado de alta. (Este caso de uso empieza desde el paso 3 del flujo básico).
+4. El sistema no reconoce la tarjeta del usuario
+	4.1 si es un alumno debe acudir con el profesor. 
+5. El profesor debe acceder al sistema.
+6. El profesor debe seleccionar la opción para dar de alta una nueva tarjeta e ingresar sus datos
+7. El profesor debe pasar la tarjeta para que esta guarde sus datos.
+
+Excepciones
+	El sistema se encuentra fallando 
+Post Condiciones 
+El usuario (alumno/profesor) registra su asistencia exitosamente en el sistema 
