@@ -1,0 +1,35 @@
+@startuml
+
+[*] --> NoRegistrado : Iniciar App
+
+state NoRegistrado {
+  [*] --> SolicitarTarjeta : Esperando Tarjeta NFC
+  SolicitarTarjeta --> NoRegistrado : Tarjeta Inválida
+  SolicitarTarjeta --> Registrado : Tarjeta Válida
+}
+
+state Registrado {
+    [*] --> Asistencia : Marcar Asistencia
+    Asistencia --> SolicitarTarjeta : Verificando datos
+    Asistencia--> AltaGrupo : Alta de Grupo
+    AltaGrupo  --> Asistencia : Grupo dado de Alta
+    Asistencia --> BajaGrupo : Baja de Grupo
+    BajaGrupo  --> Asistencia : Grupo dado de Baja
+    Asistencia --> CambioGrupo : Editar Grupo
+    CambioGrupo --> Asistencia : Grupos Editado
+    Asistencia--> AltaAlumno: Alta de Alumno
+    AltaAlumno  --> Asistencia : Alumno dado de Alta
+    Asistencia --> BajaAlumno : Baja de Alumno
+    BajaAlumno  --> Asistencia : Alumno dado de Baja
+    Asistencia --> CambioAlumno : Editar datos de Alumno
+    CambioAlumno --> Asistencia : Datos de Alumno editados
+    Asistencia --> GenerandoInforme : Generar Informe
+    GenerandoInforme --> GenerandoInforme : Procesando Informe
+    GenerandoInforme --> ExportandoInforme : Exportar Informe
+    ExportandoInforme --> ExportandoInforme : Procesando Exportación
+    ExportandoInforme --> InformeExportado
+}
+
+NoRegistrado --> [*] 
+InformeExportado --> [*]
+@enduml
