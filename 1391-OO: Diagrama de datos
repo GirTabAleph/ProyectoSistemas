@@ -1,0 +1,37 @@
+@startuml
+
+entity Profesor {
+  +numGruposAsociados: int
+  +claveProfesor: int
+  +materiasAsociadasAGrupos: String
+}
+
+entity Alumno {
+  +numeroMatricula: int
+  +gruposInscritos: int
+  +eMail: String
+}
+
+entity Tarjeta {
+  +idNFC: long
+}
+
+entity Grupo {
+  +numAlumnos: int
+  +idGrupo: int
+  +materia: String
+}
+
+entity Informe {
+  +alumnos: Alumno[]
+  +asistenciasDeAlumno: int
+  +grupos: Grupo[]
+}
+
+Profesor --|{ Alumno
+Alumno --|{ Tarjeta
+Alumno --o{ Grupo: 1 .. *
+Grupo -- Informe
+Alumno -- Informe
+
+@enduml
