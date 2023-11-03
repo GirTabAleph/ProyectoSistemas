@@ -1,0 +1,44 @@
+@startuml
+
+actor Profesor
+boundary "Aplicación Móvil" as App
+control "Sistema Asistencias" as Sistema
+database "Base de Datos" as BD
+entity "Lector NFC" as Lector
+
+Profesor -> App: Iniciar Sesión
+App -> BD: Verificar Credenciales
+BD --> App: Credenciales Válidas
+App --> Profesor: Sesión Iniciada
+
+Profesor -> App: Gestionar Grupos
+App -> Sistema: Consultar Grupos
+Sistema --> App: Lista de Grupos
+App --> Profesor: Grupos Mostrados
+
+Profesor -> App: Gestionar Alumnos
+App -> Sistema: Consultar Alumnos
+Sistema --> App: Lista de Alumnos
+App --> Profesor: Alumnos Mostrados
+
+Profesor -> App: Gestionar Tarjetas
+App -> Sistema: Consultar Tarjetas
+Sistema --> App: Lista de Tarjetas
+App --> Profesor: Tarjetas Mostradas
+
+Profesor -> App: Registrar Asistencia
+App -> Lector: Leer Tarjeta NFC
+Lector --> App: Información de Tarjeta
+App -> BD: Registrar Asistencia
+BD --> App: Asistencia Registrada
+
+Profesor -> App: Generar Informe
+App -> BD: Obtener Datos para Informe
+BD --> App: Datos para Informe
+App --> Profesor: Informe Generado
+
+Profesor -> App: Exportar Informe
+App -> BD: Obtener Datos para Exportar
+BD --> App: Datos para Exportar
+App --> Profesor: Informe Exportado
+@enduml
