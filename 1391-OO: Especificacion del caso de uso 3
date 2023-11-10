@@ -1,4 +1,5 @@
 ´Aqui se encontra los avances de la especificacion del caso de uso ID 003´
+
 Use Case Name: Registro de Alumno
 
 ID : 003
@@ -67,3 +68,6 @@ El alumno verificó que ya se encuentra registrado en el sistema
 
 Requisitos especiales
 No hay requisitos especiales
+
+APP-NFC 01
+Cambios 
