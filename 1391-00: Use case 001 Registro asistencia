@@ -35,6 +35,12 @@ El usuario no está dado de alta. (Este caso de uso empieza desde el paso 3 del 
 7. El profesor debe pasar la tarjeta para que esta guarde sus datos.
 
 Excepciones
-	El sistema se encuentra fallando 
+	El sistema se encuentra fallando **NFC DEL celular no disponible
 Post Condiciones 
 El usuario (alumno/profesor) registra su asistencia exitosamente en el sistema 
+
+
+****
+Errores
+Especificar Flujos alternativos 
+En los flujos alternativso podemos llamar otros caso de usos 
