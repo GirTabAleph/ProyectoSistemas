@@ -1,7 +1,11 @@
+<div hidden>
+``` 
+@startuml diagramaClases
+
 'Este archivo contiene en texto plano el código necesario para generar el diagrama de clases del sistema.
 
-@startuml
-header "Diagrama de clases. Equipo The Gitbrothers"
+
+'Modificaciones: Se incluyó a libnfc dentro del diagrama.
 
 'Un módulo para raspberry pi tiene estos tres modos. Los tomaremos como referencia.
 enum TipoDeLectura{
@@ -18,6 +22,12 @@ long idNFC
 
 }
 
+'Dado que libnfc es una biblioteca ya existente, el paquete es el mejor elemento que se le ajusta.
+'Para efectos prácticos basta con dejar solo el nombre de la biblioteca.
+package libnfc <<folder>>{
+
+
+}
 
 'Esta clase técnicamente es protegida porque solo ciertas clases pueden acceder a ella, no todas las clases deben accederla.
 class Tarjeta{ 
@@ -120,5 +130,11 @@ Grupo <.. Informe
 
 Alumno --o Grupo: 1 .. *
 
+libnfc <- LectorTarjeta
+
 SistemaAsistencias -- Informe
 @enduml
+```
+</div>
+
+![](diagramaClases.svg)
