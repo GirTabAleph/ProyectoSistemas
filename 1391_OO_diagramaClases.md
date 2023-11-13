@@ -1,4 +1,4 @@
-<!--
+<div hidden>
 ``` 
 @startuml diagramaClases
 
@@ -135,6 +135,6 @@ libnfc <- LectorTarjeta
 SistemaAsistencias -- Informe
 @enduml
 ```
--->
+</div>
 
 ![](diagramaClases.svg)
