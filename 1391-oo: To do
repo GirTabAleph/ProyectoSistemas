@@ -1,3 +1,4 @@
 To do: 
   Modificar diagrama de overview
   Añadir a diagrama de clases la librería libnfc
+  En diagrama de clases modificar la relación de libnfc a dependencia
