@@ -1,7 +1,9 @@
-<div hidden>
-``` 
-@startuml diagramaClases
+#Diagrama de clases.
 
+Este diagrama contiene las clases necesarias para el correcto funcionamiento del sistema.
+
+##Código del diagrama en plantuml.
+@startuml
 'Este archivo contiene en texto plano el código necesario para generar el diagrama de clases del sistema.
 
 
@@ -13,6 +15,16 @@ enum TipoDeLectura{
 LECTOR
 P2P
 EMULACION_DE_TARJETA
+
+}
+
+enum DatosAlumnoParaReporte{
+
+GRUPO
+PERIODO_CURSADO
+MATERIA_CURSADA
+NUM_INASISTENCIAS
+CALIFICACION
 
 }
 
@@ -48,22 +60,20 @@ LeerNFCTarjeta()
 +class Persona{
 
 String nombre
-String escolaridad
-int edad
 
 }
 
 +class Alumno{
 
+DatosAlumnoParaReporte datos
 int numeroMatricula
-int gruposInscritos
 String eMail
 Tarjeta tarjetaAsociada
 
 'Métodos.
 PasarTarjetaAsistencia()
 
-}
+} 
 
 +class Profesor{
 
@@ -120,6 +130,8 @@ Tarjeta ..|> ITarjeta
 'Para este sistema un alumno solo puede tener una tarjeta a menos que deba hacer el reemplazo.
 Alumno -- Tarjeta: 1
 
+Alumno - DatosAlumnoParaReporte
+
 Tarjeta -- LectorTarjeta
 
 Profesor --|> Persona
@@ -130,11 +142,10 @@ Grupo <.. Informe
 
 Alumno --o Grupo: 1 .. *
 
-libnfc <- LectorTarjeta
+libnfc <. LectorTarjeta
 
 SistemaAsistencias -- Informe
 @enduml
-```
-</div>
 
-![](diagramaClases.svg)
+##Imágen del diagrama.
+[![class-diagram.png](https://i.postimg.cc/jj20fLBp/class-diagram.png)](https://postimg.cc/TKz4MYd0)
