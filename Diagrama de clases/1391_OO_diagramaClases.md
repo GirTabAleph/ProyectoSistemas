@@ -1,5 +1,5 @@
 
-# **Diagrama de clases. **
+# **Diagrama de clases.**
 
 Este diagrama contiene las clases necesarias para el correcto funcionamiento del sistema.
 
