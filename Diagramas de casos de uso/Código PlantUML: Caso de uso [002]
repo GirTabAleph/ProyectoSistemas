@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+
+
+rectangle LecturadeNFC {
+
+  actor Profesor
+  actor Alumno
+  actor "Aplicación de Asistencias" as app
+  usecase "Verificar Datos del Alumno" as UC4
+  usecase "Seleccionar Grupo" as UC3
+  usecase "Registrar Asistencias" as UC2
+  usecase "Registro de asistencias [001]" as UC1
+
+  Profesor -- UC3
+  Profesor -- UC2
+  app -- UC4
+
+  UC2 ..> app : include
+  Alumno ..> UC2 : extiende
+  Alumno  --|> Profesor 
+  UC3 ..> UC1 : include
+  UC2 ..> UC1 : include
+
+}
+
+@enduml
