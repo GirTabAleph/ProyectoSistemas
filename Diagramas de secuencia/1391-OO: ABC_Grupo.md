@@ -1,18 +1,20 @@
-# Altas, bjas y cambios de grupo
+# **Altas, bajas y cambios de grupo**
+
 ## codigo en plant uml
 
 @startuml  
 
 == Alta de grupo == 
+
 actor Profesor
 
-Profesor -> Sistema: Ingresar datos() 
+Profesor -> Sistema: Ingresar datos()
 
-Sistema -> Almacenamiento: LeerDatos() 
+Sistema -> Almacenamiento: LeerDatos()  
 
-Almacenamiento -> Almacenamiento: Validar datos() 
+Almacenamiento -> Almacenamiento: Validar datos()  
 
-Almacenamiento -> Sistema: Alta de grupo() 
+Almacenamiento -> Sistema: Alta de grupo()  
 
 Sistema -> Profesor: Confirmacion de Alta() 
 
@@ -30,8 +32,8 @@ Sistema -> Profesor: MensajeBaja()
 
 == Modificar grupo ==
 
-Sistema -> Profesor: SolicitarDatos() 
-
+Sistema -> Profesor: SolicitarDatos()  
+  
 Profesor -> Sistema: IngresarGrupo()
 
 Sistema -> Almacenamiento: BuscarGrupo() 
