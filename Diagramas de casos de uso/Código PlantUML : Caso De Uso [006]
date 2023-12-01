@@ -1,0 +1,19 @@
+@startuml
+
+
+rectangle "Alta De Grupo" {
+
+    actor Profesor
+    actor "Sistema de registro" as app
+
+    usecase "Registrar grupo" as UC1
+    usecase "Solicitar Numero de Grupo" as UC2
+
+    Profesor -- UC1
+    UC1 ..> app
+    app ..> UC2 : Include
+
+
+}
+
+@enduml
