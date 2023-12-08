@@ -1,12 +1,11 @@
-
-# **Diagrama de clases (V4).**
+# **Diagrama de clases V1.**
 
 Este diagrama contiene las clases necesarias para el correcto funcionamiento del sistema.
 
 ## Código del diagrama en plantuml.
 
 Aún estamos investigando cómo subir el código como un archivo y no como vil texto. Mientras tanto, he aquí el código.
-
+```
 @startuml
 'Este archivo contiene en texto plano el código necesario para generar el diagrama de clases del sistema.
 
@@ -173,5 +172,6 @@ SistemaAsistencias -- Informe
 Informe - DataStorage
 Informe - Alumno
 @enduml
+```
 ## Imágen del diagrama.
 [![class-diagram.png](https://i.postimg.cc/FzxNzMZK/class-diagram.png)](https://postimg.cc/q6g9ZZWf)
