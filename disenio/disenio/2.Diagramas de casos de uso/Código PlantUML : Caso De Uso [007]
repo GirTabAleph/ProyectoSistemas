@@ -1,0 +1,22 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+
+
+
+rectangle BajaDeGrupo{
+  
+  actor profesor
+  actor "Sistema de Asistencia" as app
+
+  usecase "Bajar Un Grupo" as UC1
+  usecase "Solicitar el Grupo" as UC2
+
+  profesor -- UC1 
+  profesor ..> app : Extend
+  app --> UC2  
+  UC1 ..> UC2 : Include 
+}
+
+@enduml
