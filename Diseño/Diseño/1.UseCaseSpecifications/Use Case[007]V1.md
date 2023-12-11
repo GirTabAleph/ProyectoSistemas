@@ -1,6 +1,6 @@
 # Use Case Name: Cambio de grupo
 
-**ID :** 008
+**ID :** 007
 
 **Nivel de Importancia :** Alto
 
