@@ -23,7 +23,6 @@ Los grupos de dichas materias deben de tener claves asignadas por el Sistema de 
 2. 	El profesor selecciona la opción para registrar un grupo.
 3. 	El sistema solicita el número de grupo (En formato 9999, cuatro dígitos).
 4. 	El sistema mostrará la confirmación de la creación del grupo  
-5. 	El caso de uso termina cuando el profesor salga del sistema.
  
 **Flujo alternativo**
  
