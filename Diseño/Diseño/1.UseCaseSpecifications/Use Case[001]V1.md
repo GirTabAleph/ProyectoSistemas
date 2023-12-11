@@ -39,7 +39,7 @@ El usuario no está dado de alta.
 4.	El aplicativo verifica y valida la informacion de la tarjeta de movilidad integrada de la CDMX del alumno.
 5. El aplicativo devuelve el mensaje “no se reconoce la tarjeta del alumno”.
 7. El "profesor" debe dar de alta la tarjeta de movilidad integrada de la CDMX del alumno.
-8. Se implementara el caso de uso alta de alumno[Use case 002].[link text](directory/Use case 002.md)
+8. Se implementara el caso de uso alta de alumno[Use case 002].[link text](directory/Use case [002]V1.md)
 
 **Excepciones**
 * E1. El aplicativo esta fallando y no esta registrando asistencias.
