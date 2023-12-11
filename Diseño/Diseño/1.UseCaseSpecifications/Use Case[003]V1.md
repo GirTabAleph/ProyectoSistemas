@@ -21,9 +21,9 @@
  
 1. 	El caso de uso inicia cuando un profesor accede a la aplicacion
 
-2.	El profesor selecciona la opción para dar de baja a un alumno.
+2.	El "profesor" selecciona la opción para dar de baja a un "alumno".
 
-3.	La aplicacion solicita el nombre y número de cuenta del alumno. 	
+3.	La aplicacion solicita el nombre y número de cuenta del "alumno". 	
 
 4.  La aplicacion mostrará un mensaje de advertencia. 
 
