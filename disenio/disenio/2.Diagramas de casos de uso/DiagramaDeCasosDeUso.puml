@@ -1,0 +1,33 @@
+
+@startuml 
+
+left to right direction
+
+rectangle SistemaDeAsistencias{
+
+  actor Alumno
+  actor Profesor
+  
+  usecase "Exportar informe" as UC9
+  usecase "Cambios de grupos" as UC8
+  usecase "Baja de grupos" as UC7  
+  usecase "Alta de grupos" as UC6
+  usecase "Cambios de datos de alumnos" as UC5
+  usecase "Baja de alumnos" as UC4
+  usecase "Alta de alumnos" as UC3
+  usecase "Registro de asistencia" as UC2
+  usecase "Lectura de NFC" as UC1 
+}
+
+Alumno --> UC1
+Profesor --> UC1
+Profesor --> UC2
+Profesor --> UC3
+Profesor --> UC4
+Profesor --> UC5
+Profesor --> UC6
+Profesor --> UC7
+Profesor --> UC8
+Profesor --> UC9
+
+@enduml
