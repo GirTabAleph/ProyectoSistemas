@@ -1,0 +1,21 @@
+@startuml
+
+[*] --> IniciandoLector
+
+    IniciandoLector --> EsperandoNFC: Iniciar sistema 
+
+    EsperandoNFC--> Leyendo : Iniciar Lectura
+
+    Leyendo --> Verificando : Fin de Lectura
+
+    Verificando --> Registrado: Fin de Verificación
+
+    Registrado --> Exito: Mostrar en pantalla
+    
+    Exito --> EsperandoNFC: Reiniciar
+
+    Verificando  --> Error : Error de Lectura
+
+    Error --> EsperandoNFC : Reiniciar
+
+@enduml
