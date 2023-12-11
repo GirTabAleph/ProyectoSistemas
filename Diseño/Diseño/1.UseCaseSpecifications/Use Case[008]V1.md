@@ -15,7 +15,7 @@
 **Breve Descripción:** En este caso de uso se describe cómo el profesor modifica en el sistema a un grupo para actualizar o cambiar temas, archivos o cualquier contenido relevante para el desarrollo del curso. el registro de asistencias.
 
 **Precondiciones:** El Profesor debe de tener registrados alumnos en la materia.
-Los grupos de dichas materias deben de tener claves asignadas por el Sistema de Inscripciones
+Los grupos de dichas materias deben de tener claves asignadas.
 
 **Flujo básico de eventos:**
  
