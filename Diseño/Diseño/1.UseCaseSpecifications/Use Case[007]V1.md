@@ -20,12 +20,11 @@ Los grupos de dichas materias deben de tener claves asignadas.
 **Flujo básico de eventos:**
  
 1. 	El caso de uso inicia cuando un profesor accede al sistema.
-2. 	El profesor selecciona la opción para dar de baja un grupo.
+2. 	El "profesor" selecciona la opción para dar de baja un grupo.
 3. 	El sistema solicita el número de grupo (en formato 9999, cuatro dígitos).
 4. 	El sistema mostrará una pestaña de advertencia.
 5.	El sistema mostrará la confirmación de la baja del grupo.
 6.	El sistema mostrará un mensaje avalando la baja del grupo.
-7. 	El caso de uso termina cuando el profesor salga del sistema.
  
 **Flujo alternativo**
  
