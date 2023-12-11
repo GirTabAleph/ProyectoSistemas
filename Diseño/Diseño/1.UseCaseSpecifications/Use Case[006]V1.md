@@ -20,7 +20,7 @@ Los grupos de dichas materias deben de tener claves asignadas.
 **Flujo básico de eventos:**
  
 1. 	El caso de uso inicia cuando un profesor accede al sistema.
-2. 	El profesor selecciona la opción para registrar un grupo.
+2. 	El "profesor" selecciona la opción para registrar un grupo.
 3. 	El sistema solicita el número de grupo (En formato 9999, cuatro dígitos).
 4. 	El sistema mostrará la confirmación de la creación del grupo  
  
