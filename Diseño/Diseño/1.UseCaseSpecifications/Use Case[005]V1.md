@@ -1,6 +1,6 @@
 # Use Case Name: Alta de grupo
 
-**ID :** 006
+**ID :** 005
 
 **Nivel de Importancia :** Alto
 
