@@ -10,16 +10,16 @@
 
 **Stakeholders e Interesados**
 
-**Profesor :** Es el responsable de gestionar y verificar los datos de los grupos registrados
+Profesor : Es el responsable de gestionar y verificar los datos de los grupos registrados
 
-**Breve Descripción:** En este caso de uso se describe cómo el profesor modifica en el sistema a un grupo para actualizar o cambiar temas, archivos o cualquier contenido relevante para el desarrollo del curso. el registro de asistencias.
+**Breve Descripción:** En este caso de uso se describe cómo el "profesor" modifica en el sistema a un grupo para actualizar o cambiar temas, archivos o cualquier contenido relevante para el registro de asistencias.
 
-**Precondiciones:** El Profesor debe de tener registrados alumnos en la materia.
+**Precondiciones:** El "Profesor" debe de tener registrados "alumnos" en la materia.
 Los grupos de dichas materias deben de tener claves asignadas.
 
 **Flujo básico de eventos:**
  
-1. 	El caso de uso inicia cuando un profesor accede a la aplicación.
+1. 	El caso de uso inicia cuando un "profesor" accede a la aplicación.
 2. 	El sistema solicita el número de grupo (en formato 9999, cuatro dígitos). 	
 3. 	El "profesor" selecciona la opción para modificar el grupo. 
 4.	El sistema mostrará los campos a modificar (Modificar o eliminar asistencias, modificar o eliminar descripción del grupo, subir o eliminar algún archivo relevante).
