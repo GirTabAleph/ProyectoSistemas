@@ -1,4 +1,4 @@
-# **Diagrama de secuencia de Lector NFC .**
+# **Diagrama de secuencia de Lector NFC (V1) .**
 
 Este diagrama representa la secuencia del proceso de la lectura del NFC en el sistema, tambien mostrara algunas 
 situaciones en donde el proceso no sea exitoso.
