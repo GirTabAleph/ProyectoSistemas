@@ -1,0 +1,94 @@
+@startuml
+
+class Tarjeta{ 
+
+    long idNFC
+    AsociarNFCYAAlumno(idNFC)
+
+}
+
+#class DataStorage{
+
+    read() : Alumno
+    read() : Informe
+    write(Alumno)
+    write(Informe)
+
+}
+
+interface DataSource{
+
+    read() : Tarjeta
+
+}
+
++class Alumno{
+
+    DatosAlumnoParaReporte datos
+    int numeroMatricula
+    String eMail
+    Tarjeta tarjetaAsociada
+    Grupo Grupos[]
+
+
+} 
+
++class Profesor{
+
+    int numGruposAsociados
+    int claveProfesor
+    String materiasAsociadasAGrupos
+
+    AltaAlumno(Alumno)
+    BajaAlumno()
+    CambioAlumno(Alumno)
+    AltaGrupo(Grupo)
+    BajaGrupo()
+    CambioGrupo(Grupo)
+
+}
+
++class Grupo{
+
+    Alumno Alumnos[]
+    int idGrupo
+    String materia
+
+}
+
+class SistemaAsistencias{
+
+    Alumno[] alumnos
+    Grupo[] grupos
+
+    'Métodos.
+    AccederAInforme()
+    RegistrarAsistenciaAlumno()
+    GenerarInformePorTiempo()
+    ExportarInforme()
+    GuardarInforme()
+
+}
+
+-class Informe{
+
+    Alumno[] alumnos
+    Grupo[] grupos
+
+}
+
+'Relaciones.
+
+    Alumno }--{ Grupo
+    Profesor }--{ Grupo
+    Alumno }--{ Profesor
+    Profesor --|{ Informe
+    Alumno --|| Tarjeta
+    SistemaAsistencias --|| DataStorage
+    SistemaAsistencias --|{ Alumno
+    SistemaAsistencias --|{ Profesor
+    SistemaAsistencias --|{ Informe
+    SistemaAsistencias --|{ Tarjeta
+    SistemaAsistencias --|| DataSource
+
+@enduml
