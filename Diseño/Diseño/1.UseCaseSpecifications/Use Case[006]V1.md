@@ -15,7 +15,7 @@
 **Breve Descripción:** En este caso de uso se describe cómo el profesor da de alta en el sistema a un grupo para el registro de asistencias
 
 **Precondiciones:** El Profesor debe de tener alumnos en la materia
-Los grupos de dichas materias deben de tener claves asignadas por el Sistema de Inscripciones
+Los grupos de dichas materias deben de tener claves asignadas.
 
 **Flujo básico de eventos:**
  
