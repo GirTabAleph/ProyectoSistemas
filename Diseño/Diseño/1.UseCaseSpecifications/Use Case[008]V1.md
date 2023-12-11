@@ -21,7 +21,7 @@ Los grupos de dichas materias deben de tener claves asignadas.
  
 1. 	El caso de uso inicia cuando un profesor accede a la aplicación.
 2. 	El sistema solicita el número de grupo (en formato 9999, cuatro dígitos). 	
-3. 	El profesor selecciona la opción para modificar el grupo. 
+3. 	El "profesor" selecciona la opción para modificar el grupo. 
 4.	El sistema mostrará los campos a modificar (Modificar o eliminar asistencias, modificar o eliminar descripción del grupo, subir o eliminar algún archivo relevante).
 6.	El sistema mostrará la confirmación para los cambios realizados.
 7. 	El sistema se actualizará con los nuevos datos modificados.
