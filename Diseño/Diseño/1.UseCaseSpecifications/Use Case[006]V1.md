@@ -10,16 +10,16 @@
 
 **Stakeholders e Interesados**
 
-**Profesor :** Es el responsable de gestionar y verificar los datos de los grupos registrados
+Profesor : Es el responsable de gestionar y verificar los datos de los grupos registrados
 
-**Breve Descripción:** En este caso de uso se describe cómo el profesor da de baja en el sistema a un grupo para el registro de asistencias.
+**Breve Descripción:** En este caso de uso se describe cómo el "profesor" da de baja en el sistema a un grupo para el registro de asistencias.
 
-**Precondiciones:** El Profesor debe de tener registrados alumnos en la materia.
+**Precondiciones:** El "Profesor" debe de tener registrados "alumnos" en la materia.
 Los grupos de dichas materias deben de tener claves asignadas.
 
 **Flujo básico de eventos:**
  
-1. 	El caso de uso inicia cuando un profesor accede al sistema.
+1. 	El caso de uso inicia cuando un "profesor" accede al sistema.
 2. 	El "profesor" selecciona la opción para dar de baja un grupo.
 3. 	El sistema solicita el número de grupo (en formato 9999, cuatro dígitos).
 4. 	El sistema mostrará una pestaña de advertencia.
