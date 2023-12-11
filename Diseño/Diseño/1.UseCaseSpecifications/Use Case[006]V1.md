@@ -1,6 +1,6 @@
 # Use Case Name: Baja de grupo
 
-**ID :** 007
+**ID :** 006
 
 **Nivel de Importancia :** Alto
 
