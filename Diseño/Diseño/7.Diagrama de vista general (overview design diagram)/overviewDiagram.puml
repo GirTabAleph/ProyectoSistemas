@@ -21,7 +21,7 @@ Database "Data storage" as DAS
 mainframe AltaAlumno
 
 ALM -> PFR : Dar tarjeta
-PFR -> LNFC : Pasar tarjeta a lector
+PFR -> LNFC : Escanear tarjeta con el lector
 LNFC -> SYS : Mandar NFC único a sistema
 SYS -> SYS : Verificar existencia de NFC
 
@@ -58,14 +58,14 @@ endwhile (Sí)
 
 Participant Profesor as PFR
 Participant "Sistema de asistencias" as SA
-Participant "Hashmap" as HASMP
+Participant "Writer" as WR
 Database "Data storage" as DAS
 
 mainframe RegistrarAlumnoEnGrupo
 
 SA <- PFR : Cargar datos de alumno \n al sistema
-SA -> HASMP : Enviar datos de alumno a hashmap
-HASMP -> DAS : Cargar valores hash \n al data storage
+SA -> WR: Enviar datos de alumno al writer
+WR-> DAS : Cargar valores hash \n al data storage
 DAS -> DAS : write(hash, grupo)
 DAS --> SA : Alumno
 
@@ -100,7 +100,7 @@ Database "Data storage" as DAS
 
 mainframe BajaAlumno
 
-PFR -> SA : Mandar búsqueda del alumno\n al sistema de asistencias
+PFR -> SA : Seleccionar el alumno\n en lista desplegada
 
 group Alumno Existe
 
@@ -109,19 +109,39 @@ DAS --> SA : Mensaje "Alumno borrado exitosamente."
 
 end
 
-group Alumno No Existe
-
-DAS --> SA : Mensaje "El alumno que usted quiere borrar\n no existe en el sistema."
-
-end 
 
 }}
 ;
 
 break
 
+:GenerarYExportarReporte
+{{
+
+Participant Profesor as PFR
+Participant "Sistema de Asistencias" as SA
+Database "Data storage" as DAS
+Participant Informe as INF
+
+mainframe GenerarYExportarReporte
+
+PFR -> SA : Solicitar el informe
+SA -> PFR : Desplegar opciones de reporte\n disponibles
+PFR -> SA : Seleccionar tipo de reporte
+
+SA -> DAS : read(datos)
+DAS --> INF : writeOnReport(datos)
+INF -> SA : Informe listo para\n exportar
+SA -> PFR : Desplegar lista de formatos \n para exportación
+PFR -> SA : Formato elegido de lista
+SA --> PFR : Informe en formato elegido
+
+
+}}
+;
+break
+
 stop
 
 }
 @enduml
-
