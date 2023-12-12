@@ -32,10 +32,8 @@ enum DatosAlumnoParaReporte{
 
 GRUPO
 PERIODO_CURSADO
-MATERIA_CURSADA
 NUM_ASISTENCIAS
 NUM_FALTAS
-CALIFICACION
 
 }
 
@@ -97,7 +95,6 @@ String nombre
 
 DatosAlumnoParaReporte datos
 int numeroMatricula
-String eMail
 Tarjeta tarjetaAsociada
 Grupo Grupos[]
 
