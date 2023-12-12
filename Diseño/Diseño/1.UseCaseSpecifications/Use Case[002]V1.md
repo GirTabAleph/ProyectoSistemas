@@ -41,7 +41,7 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 
 6. El aplicación redirecciona al caso de uso 4 [Use Case[004]V1.md] (../../../Use Case[004]V1.md)   
 
-
+[Google]: http://google.com/
 **Excepciones**
 
 E1 (F P): La aplicación solo registrara la tarjeta de movilidad integrada 
