@@ -2,93 +2,51 @@
 
 class Tarjeta{ 
 
-    long idNFC
-    AsociarNFCYAAlumno(idNFC)
+    Id_NFC String
+    TipoLectura enum
 
 }
 
-#class DataStorage{
-
-    read() : Alumno
-    read() : Informe
-    write(Alumno)
-    write(Informe)
-
-}
-
-interface DataSource{
-
-    read() : Tarjeta
-
-}
 
 +class Alumno{
 
-    DatosAlumnoParaReporte datos
-    int numeroMatricula
-    String eMail
-    Tarjeta tarjetaAsociada
-    Grupo Grupos[]
-
-
+    Numero_Matricula String
+    Nombre String
+    Grupo grupo 
 } 
 
 +class Profesor{
 
-    int numGruposAsociados
-    int claveProfesor
-    String materiasAsociadasAGrupos
-
-    AltaAlumno(Alumno)
-    BajaAlumno()
-    CambioAlumno(Alumno)
-    AltaGrupo(Grupo)
-    BajaGrupo()
-    CambioGrupo(Grupo)
+    Id_Profesor String
+    Nombre String
+    Grupo grupo
+    Informe informe
 
 }
 
 +class Grupo{
 
-    Alumno Alumnos[]
-    int idGrupo
-    String materia
+    Id_Grupo String 
+    Alumno alumno
+    Profesor profesor
 
 }
 
-class SistemaAsistencias{
-
-    Alumno[] alumnos
-    Grupo[] grupos
-
-    'Métodos.
-    AccederAInforme()
-    RegistrarAsistenciaAlumno()
-    GenerarInformePorTiempo()
-    ExportarInforme()
-    GuardarInforme()
-
-}
 
 -class Informe{
 
-    Alumno[] alumnos
-    Grupo[] grupos
+    Profesor profesor 
+    Grupo grupo 
 
 }
 
 'Relaciones.
 
     Alumno }--{ Grupo
-    Profesor }--{ Grupo
+    Profesor --|{ Grupo
     Alumno }--{ Profesor
     Profesor --|{ Informe
     Alumno --|| Tarjeta
-    SistemaAsistencias --|| DataStorage
-    SistemaAsistencias --|{ Alumno
-    SistemaAsistencias --|{ Profesor
-    SistemaAsistencias --|{ Informe
-    SistemaAsistencias --|{ Tarjeta
-    SistemaAsistencias --|| DataSource
-
+    Grupo --|{ Informe
+ 
 @enduml
