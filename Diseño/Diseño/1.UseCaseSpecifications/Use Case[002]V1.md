@@ -43,12 +43,12 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 
 
 **Excepciones**
+ 
+E1 (F P): El Celular del Profresor no es compatible con el sistema.
 
-E1 (F P): La aplicación solo registrara la tarjeta de movilidad integrada 
+E2 (F P): El numero de cuenta del alumno solo debe de contener numeros
 
-E2 (F P): El Celular del Profresor no es compatible con el sistema.
-
-E3 (F P): El numero de cuenta solo debe de contener numeros
+E3 (F P): El Nombre del "Alumno" no debe de contener numeros.
   
 **Post Condiciones** 
 
