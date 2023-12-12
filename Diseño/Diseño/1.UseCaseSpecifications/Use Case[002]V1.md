@@ -39,7 +39,7 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 
 5. El aplicación mostrará un mensaje que el "alumno" ya se encuentra registrado y si desea modificar los datos
 
-6. El aplicación redirecciona al caso de uso 4 [Use Case[004]V1.md] (https://github.com/GirTabAleph/ProyectoSistemas/blob/main/Diseño/Diseño/1.UseCaseSpecifications/Use%20Case%5B004%5DV1.md)
+6. El aplicación redirecciona al caso de uso 4 [(UseCase 004)](https://github.com/GirTabAleph/ProyectoSistemas/blob/main/Dise%C3%B1o/Dise%C3%B1o/1.UseCaseSpecifications/Use%20Case%5B004%5DV1.md)
 
 
 **Excepciones**
