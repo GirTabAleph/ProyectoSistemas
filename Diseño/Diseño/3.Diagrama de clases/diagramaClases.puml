@@ -66,9 +66,9 @@ ITarjeta Tarjeta
 
 }
 
-#class DataStorage{
+#interface DataStorage{
 
-'Toda esta clase es únicamente de métodos.
+'Toda esta interfaz es únicamente de métodos.
 read() : Alumno
 read() : Informe
 write(Alumno)
