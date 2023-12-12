@@ -29,8 +29,9 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 2. El profesor selecciona la opción para registrar a un "alumno".
 3. La aplicación solicita el nombre y número de cuenta del "alumno". 	
 4. La aplicación solicita el grupo y la tarjeta de movilidad integrada.
-5. El aplicativo asocia los datos del "alumno" a la tarjeta de movilidad integrada.
-6. La aplicación mostrará un mensaje de registro exitoso.  
+5. La "tarjeta de movilidad integrada" envia datos al aplicativo.
+6. El aplicativo asocia los datos del alumno con la tarjeta.
+7. La aplicación mostrará un mensaje de registro exitoso.  
 
  
 **Flujo alternativo** 
@@ -42,15 +43,10 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 6. El aplicación redirecciona al caso de uso 4 [Use Case[004]V1.md] (/Diseño/Diseño/1.UseCaseSpecifications/Use Case[004]V1.md)   
 
 
-**5. La aplicación solicita el grupo y la tarjeta de movilidad integrada, la app no logre acceder a la tecnologia NFC del dispositivo, entonces:** 
-
-6. La aplicación mostrará un mensaje que no se logro conectar al NFC
-
-7. La aplicación solicitará que se ingrese manualmente los números que se encuentran atrás de la tarjeta de movilidad.
-
 **Excepciones**
 
 E1 (F P): La aplicación solo registrara la tarjeta de movilidad integrada 
+E2 (F P): El Celular del Profresor no es compatible con el sistema.
   
 **Post Condiciones** 
 
