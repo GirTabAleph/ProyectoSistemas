@@ -13,13 +13,35 @@ EMULACION_DE_TARJETA
 
 }
 
+enum Temporalidad{
+DIA
+SEMANAL
+MENSUAL
+SEMESTRAL
+}
+
+enum Formato{
+CSV
+XLS
+XLSX
+PDF
+
+}
+
 enum DatosAlumnoParaReporte{
 
 GRUPO
 PERIODO_CURSADO
 MATERIA_CURSADA
-NUM_INASISTENCIAS
+NUM_ASISTENCIAS
+NUM_FALTAS
 CALIFICACION
+
+}
+
+interface ILectorTarjeta{
+
+TipoDeLectura TipoActual
 
 }
 
@@ -39,9 +61,22 @@ package libnfc <<folder>>{
 'Esta clase técnicamente es protegida porque solo ciertas clases pueden acceder a ella, no todas las clases deben accederla.
 class Tarjeta{ 
 
-idNFC
+ITarjeta Tarjeta
+
 
 }
+
+#class DataStorage{
+
+'Toda esta clase es únicamente de métodos.
+read() : Alumno
+read() : Informe
+write(Alumno)
+write(Informe)
+
+}
+
+
 
 +class LectorTarjeta{
 
@@ -64,9 +99,10 @@ DatosAlumnoParaReporte datos
 int numeroMatricula
 String eMail
 Tarjeta tarjetaAsociada
+Grupo Grupos[]
 
 'Métodos.
-PasarTarjetaAsistencia()
+
 
 } 
 
@@ -74,7 +110,6 @@ PasarTarjetaAsistencia()
 
 int numGruposAsociados
 int claveProfesor
-String materiasAsociadasAGrupos
 
 'Métodos.
 AltaAlumno(Alumno)
@@ -88,10 +123,8 @@ CambioGrupo(Grupo)
 
 +class Grupo{
 
-int numAlumnos
+Alumno Alumnos[]
 int idGrupo
-String materia
-Alumno[] alumnos
 
 }
 
@@ -101,9 +134,10 @@ Alumno[] alumnos
 Grupo[] grupos
 
 'Métodos.
+AccederAInforme()
 RegistrarAsistenciaAlumno()
-GenerarInformePorTiempo()
-ExportarInforme()
+GenerarInformePorTiempo(Temporalidad)
+ExportarInforme(Formato)
 
 }
 
@@ -111,15 +145,16 @@ ExportarInforme()
 -class Informe{
 
 Alumno[] alumnos
-int aistenciasDeAlumno
 Grupo[] grupos
+
 
 }
 
 'Relaciones.
-TipoDeLectura <-- LectorTarjeta
+TipoDeLectura <-- ILectorTarjeta
 
 Tarjeta ..|> ITarjeta
+LectorTarjeta <|.. ILectorTarjeta
 
 
 'Para este sistema un alumno solo puede tener una tarjeta a menos que deba hacer el reemplazo.
@@ -139,6 +174,13 @@ Alumno --o Grupo: 1 .. *
 
 libnfc <. LectorTarjeta
 
-SistemaAsistencias -- Informe
-@enduml
+SistemaAsistencias ---> Temporalidad
+SistemaAsistencias ---> Formato
 
+SistemaAsistencias .> Alumno
+SistemaAsistencias .> Grupo
+SistemaAsistencias -- Informe
+
+Informe - DataStorage
+Informe - Alumno
+@enduml
