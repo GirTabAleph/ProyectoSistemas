@@ -40,7 +40,7 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 
 5. El aplicación mostrará un mensaje que el "alumno" ya se encuentra registrado y si desea modificar los datos
 
-6. El aplicación redirecciona al caso de uso 4 [Use Case[004]V1.md] (/Diseño/Diseño/1.UseCaseSpecifications/Use Case[004]V1.md)   
+6. El aplicación redirecciona al caso de uso 4 [Use Case[004]V1.md] (../../1.UseCaseSpecifications/Use Case[004]V1.md)   
 
 
 **Excepciones**
