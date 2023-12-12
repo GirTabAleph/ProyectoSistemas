@@ -6,3 +6,4 @@
 | XLS | Información del archivo XLS - ¿Qué es un formato de archivo XLS? (2023, junio 8). Fileformat.app. https://kb.fileformat.app/es/extension/xls-file-info/ | 
 | XLSX | Guardar un libro con otro formato de archivo. (s/f). Microsoft.com. Recuperado el 12 de diciembre de 2023, de https://support.microsoft.com/es-es/office/guardar-un-libro-con-otro-formato-de-archivo-6a16c862-4a36-48f9-a300-c2ca0065286e | 
 | PDF | ¿Qué es un formato de archivo PDF? (s/f). FineReader PDF. Recuperado el 12 de diciembre de 2023, de https://pdf.abbyy.com/es/learning-center/what-is-pdf/ |
+| Informe | Morales, F. C. (2020, agosto 6). Informe. Economipedia. https://economipedia.com/definiciones/informe.html |
