@@ -1,8 +1,8 @@
 | Concepto  | Definición|
 | ------------- | ------------- |
-| Clave | Se refiere a un código númerico único proporcionado por la UNAM que identifica de manera específica a una asignatura o materia dentro de un sistema académico o educativo.
+| Clave | Se refiere a un código númerico único proporcionado por la UNAM que identifica de manera específica a una asignatura dentro de un sistema académico. |
 | CSV | Las siglas CSV vienen del inglés "Comma Separated Values" y significan valores separados por comas. Dicho esto, un archivo CSV es cualquier archivo de texto en el cual los caracteres están separados por comas, haciendo una especie de tabla en filas y columnas. | 
-| Informe | Un informe es un documento que tiene como fin poder comunicar un conjunto de información recogida y previamente analizada según determinados criterios. |
+| Informe | Es un documento que tiene como fin poder resumir y presentar información sobre la presencia o ausencia de individuos dentro de grupo en especifico. |
 | Near Field Communication o NFC  | Es una tecnología de conectividad inalámbrica de corto alcance que utiliza la inducción de campos magnéticos para permitir la comunicación entre dispositivos cuando se tocan o se acercan a unos pocos centímetros entre sí. |
 | Número de Matricula | Es un número de cuenta proporcionado por la UNAM, generalmente se refiere a un identificador único asignado a un estudiante para propósitos administrativos y de registro. Este número de cuenta puede ser utilizado para rastrear la información académica del estudiante a lo largo de su tiempo en la institución educativa. |
 | PDF | PDF significa Portable Document Format (Formato Portátil de Documento), usado para mostrar documentos en la forma electrónica independiente del software, hardware o sistema operativo donde se visualiza. | 
