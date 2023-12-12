@@ -7,4 +7,4 @@
 | XLS | Es un formato de archivo utilizado para almacenar hojas de cálculo de Microsoft Excel. |
 | XLSX | Es un formato de archivo basado en XML y habilitado para macros de Excel 2007 a 2013.| 
 | PDF | PDF significa Portable Document Format (Formato Portátil de Documento), usado para mostrar documentos en la forma electrónica independiente del software, hardware o sistema operativo donde se visualiza. |
-| Informe | Un informe es un documento que tiene como fin poder comunicar un conjunto de información recogida y previamente analizada según determinados criterios. | 
+| informe | Un informe es un documento que tiene como fin poder comunicar un conjunto de información recogida y previamente analizada según determinados criterios. | 
