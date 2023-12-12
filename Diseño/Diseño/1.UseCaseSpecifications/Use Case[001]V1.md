@@ -7,7 +7,7 @@
 
 **Actor Primario:** 
 
-Alumno: Es quien registra su asistencia en el aplicativo por medio de su tarjeta de movilidad integrada de la CDMX.
+Alumno: Es quien registra su asistencia en el aplicativo por medio de su "tarjeta de movilidad integrada" de la CDMX.
 
 **Actores secundarios**
 
@@ -16,16 +16,16 @@ Profesor: Es el encargado de registrar la asistencia de los alumnos por grupo en
 **Tipo de Caso de Uso:** esencial 
 
 **Breve Descripción:** 
-el caso de uso describe como el "profesor" registra las asistencias de sus alumnos por medio de sus tarjetas de movilidad integrada de la CDMX, atravez del aplicativo con el lector NFC en tiempo real.
+el caso de uso describe como el "profesor" registra las asistencias de sus alumnos por medio de sus tarjetas de movilidad integrada de la CDMX, atravez del aplicativo en tiempo real.
 
 **Precondiciones:** 
 El usuario "alumno" debe estar dado de alta en el aplicativo. 
-El usuario "alumno" debe contar con su tarjeta de movilidad integrada de la CDMX.
+El usuario "alumno" debe contar con su "tarjeta de movilidad" integrada de la CDMX.
 
 **Flujo básico de eventos:**	
 1.	El "profesor" abre el aplicativo y selecciona la opción de asistencias junto con el grupo.
 2.	El "profesor" pide a los alumnos pasar con su tarjeta de movilidad integrada de la CDMX para tomar la asistencia del dia.
-3.	El "Alumno" pasa su tarjeta por el lector NFC del aplicativo.
+3.	El "Alumno" pasa su tarjeta por el aplicativo.
 4.	El aplicativo verifica y valida la informacion de la tarjeta de movilidad integrada de la CDMX del alumno.
 5.	El aplicativo registra la asistencia. 
 6.	El aplicativo devuelve un mensaje de asistencia exitosa.
