@@ -29,9 +29,8 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 2. El profesor selecciona la opción para registrar a un "alumno".
 3. La aplicación solicita el nombre y número de cuenta del "alumno". 	
 4. La aplicación solicita el grupo y la tarjeta de movilidad integrada.
-5. La "tarjeta de movilidad integrada" envia datos al aplicativo.
-6. El aplicativo asocia los datos del alumno con la tarjeta.
-7. La aplicación mostrará un mensaje de registro exitoso.  
+5. La "tarjeta de movilidad integrada" envia datos al aplicativo, para registrar los datos del "alumno".
+6. La aplicación mostrará un mensaje de registro exitoso.  
 
  
 **Flujo alternativo** 
@@ -46,6 +45,7 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 **Excepciones**
 
 E1 (F P): La aplicación solo registrara la tarjeta de movilidad integrada 
+
 E2 (F P): El Celular del Profresor no es compatible con el sistema.
   
 **Post Condiciones** 
