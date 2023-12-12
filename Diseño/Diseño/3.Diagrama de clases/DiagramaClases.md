@@ -1,8 +1,8 @@
 
-# **Diagrama de clases (V1).**
+# **Diagrama de clases (V2).**
 
 Este diagrama contiene las clases necesarias para el correcto funcionamiento del sistema.
-Dentro de este directorio se encuentra el código en formato .puml en caso de ser necesaria su modificación a futuro.
+Se ha añadido data storage como clase, así como otras relaciones faltantes.
 
 ## Imágen del diagrama.
-[![class-diagram.png](https://i.postimg.cc/jj20fLBp/class-diagram.png)](https://postimg.cc/TKz4MYd0)
+[![diagrama-Clases.png](https://i.postimg.cc/L6Rvw70k/diagrama-Clases.png)](https://postimg.cc/w3fhsWz3)
