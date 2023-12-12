@@ -1,5 +1,6 @@
 | Concepto  | Definición|
 | ------------- | ------------- |
+| Clave | Se refiere a un código númerico único que identifica de manera específica a una asignatura o materia dentro de un sistema académico o educativo.
 | CSV | Las siglas CSV vienen del inglés "Comma Separated Values" y significan valores separados por comas. Dicho esto, un archivo CSV es cualquier archivo de texto en el cual los caracteres están separados por comas, haciendo una especie de tabla en filas y columnas. | 
 | Informe | Un informe es un documento que tiene como fin poder comunicar un conjunto de información recogida y previamente analizada según determinados criterios. |
 | Near Field Communication o NFC  | Es una tecnología de conectividad inalámbrica de corto alcance que utiliza la inducción de campos magnéticos para permitir la comunicación entre dispositivos cuando se tocan o se acercan a unos pocos centímetros entre sí. |
