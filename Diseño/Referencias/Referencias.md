@@ -1,6 +1,7 @@
 |Definción|Referencia|
 |---------|---------|
 | .md | ¿Qué son los archivos MD? (s/f). online-convert.com. Recuperado el 13 de diciembre de 2023, de https://www.online-convert.com/es/formato-de-archivo/md |
+| .puml | Paniagua, A. P. (2019, 11 febrero). PlantUML - dibuja diagramas UML de forma sencilla - Adictos al trabajo. Adictos al trabajo. https://www.adictosaltrabajo.com/2015/12/18/tutorial-plantuml-dibuja-diagramas-de-forma-sencilla/ |
 | Android 12 | Wikipedia contributors. (s/f). Android 12. Wikipedia, The Free Encyclopedia. https://es.wikipedia.org/w/index.php?title=Android_12&oldid=155240588 |
 | CSV | López, P. (2020, junio 29). ¿Qué es un archivo CSV y para qué sirve? GEEKNETIC. https://www.geeknetic.es/Archivo-CSV/que-es-y-para-que-sirve |
 | Informe | Morales, F. C. (2020, agosto 6). Informe. Economipedia. https://economipedia.com/definiciones/informe.html |
