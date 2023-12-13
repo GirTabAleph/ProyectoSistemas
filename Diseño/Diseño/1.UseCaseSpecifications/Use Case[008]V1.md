@@ -6,7 +6,11 @@
 
 **Actor Primario:** Profesor
 
-**Tipo de Caso de Uso:** Essencial 
+**Tipo de Caso de Uso:** Esencial 
+
+**Stakeholders e Interesados**
+
+Profesor : Es el responsable de gestionar y verificar los datos de los grupos registrados
 
 **Breve Descripción:** 
 El caso de uso permite crear informes sobre las asistencias de los alumnos, esto a partir de la primera toma de asistencia del curso y permite al profesor consultar, descargar o exportar la lista.
