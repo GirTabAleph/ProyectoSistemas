@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> las limitaciones pueden ser resueltas en futuras versiones y agregarse mas
+
 # Alcance del aplicativo
 El aplicativo se desarrollará para dispositivos Android con versiones Android 12 o posteriores, para uso exclusivo de alumnos de la Facultad de Contaduría y Administración, específicamente para el área de Informática. 
 El aplicativo al estar pensado para uso local no contará con acceso a internet y solo será distribuida a los profesores que impartan clases a grupos de informática. Es importante resaltar que, al ser la primera versión realizada, el aplicativo no cuenta con un respaldo de datos.
