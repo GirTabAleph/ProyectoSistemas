@@ -26,7 +26,7 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 **Flujo básico de eventos:**
  
 1. El caso de uso inicia cuando un "profesor" accede a la aplicación.
-2. El profesor selecciona la opción para registrar a un "alumno".
+2. El "profesor" selecciona la opción para registrar a un "alumno".
 3. La aplicación solicita el nombre y número de cuenta del "alumno". 	
 4. La aplicación solicita el grupo y la "tarjeta de movilidad integrada".
 5. La "tarjeta de movilidad integrada" envia datos al aplicativo, para asociar los datos del "alumno".
