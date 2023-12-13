@@ -1,0 +1,118 @@
+@startuml
+
+== Altas Grupos ==
+
+alt Registro de grupos
+
+    App -> View: Seleccionar altaGrupo
+    View -> Controller: solicitud de grupo
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: CrearGrupo
+    DAO -> B.D: GuardarGrupo
+    B.D --> DAO: Grupo guardado 
+    DAO --> Controller: Regresa grupo
+    Controller --> View: Mostrar grupo
+    View --> App: Fin del proceso
+    
+
+else Grupo ya existente en la app
+
+    App -> View: Seleccionar altaGrupo
+    View -> Controller: solicitud de grupo
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: CrearGrupo
+    DAO -> B.D: GuardarGrupo
+    B.D --> DAO: Error de guardado
+    DAO --> Controller: regresar error
+    Controller --> View: print("Grupo ya existente")
+    View --> App: Reiniciar proceso
+
+End
+
+
+== Baja Grupo ==
+
+alt Baja de grupo exitoso
+
+    App -> View: Seleccionar baja
+    View -> Controller: Solicitud grupo
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Verificar datos
+    DAO -> B.D: Validar datos
+    B.D --> DAO: Grupo eliminado
+    DAO --> Controller: regresar cambio
+    Controller --> View: print("Grupo eliminado")
+    View --> App: Fin de proceso
+    
+else Grupo no encontrado
+
+    App -> View: Seleccionar baja
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Verificar datos
+    DAO -> B.D: Validar datos
+    B.D --> DAO: Error de busqueda
+    DAO --> Controller: Regresar error
+    Controller --> View: print("grupo no encontrado")
+    View --> App: Reiniciar proceso
+    
+End
+
+
+== Cambio grupo ==
+
+alt Cambio de datos exitoso
+
+    App -> View: Seleccionar cambio
+    View -> Controller: solicitud de grupo
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Sobreescribir
+    B.D --> DAO: Guardado exitoso
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Exito
+    Controller --> View: print("Grupo actualizado")
+    View --> App: Fin de proceso
+
+else Grupo no encontrado
+
+    App -> View: Seleccionar cambio
+    View -> Controller: solicitud grupo
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Sobreescribir
+    B.D --> DAO: Error de busqueda
+    DAO --> DataStorage: Enviar error
+    DataStorage --> Controller: Regresar Error
+    Controller --> View: print("Grupo no encontrado")
+    View --> App: Reiniciar proceso
+
+else Datos repetidos
+
+    App -> View: Seleccionar cambio
+    View -> Controller: solicitud grupo
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Sobreescribir
+    B.D --> DAO: Error al guardar
+    DAO --> DataStorage: Enviar error
+    DataStorage --> Controller: Regresar error
+    Controller --> View: print("Datos repetidos en otro grupo")
+    View --> App: Reiniciar proceso
+
+end
+@enduml
