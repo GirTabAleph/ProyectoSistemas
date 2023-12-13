@@ -1,0 +1,35 @@
+@startuml
+
+alt Exporte/descarga Correcta
+
+    App -> View: opcion informe
+    View -> Controller: solicitud de informe
+    Controller --> View: Solicitar clave
+    Controller -> DataStorage: Enviar clave
+    DataStorage -> DAO: generar informe
+    DAO -> B.D: Guardar informe
+    B.D --> DAO: Validado
+    DAO --> DataStorage: Enviar informe
+    DataStorage --> Controller: Regresar informe
+    Controller --> View: mosrtar informe
+    View --> B.D: Descargar informe
+    View --> App: Exportar informe
+    View --> App: Reiniciar proceso
+
+
+else Error en exporte/descarga
+  
+    App -> View: opcion informe
+    View -> Controller: solicitud de informe
+    Controller --> View: Solicitar clave
+    Controller -> DataStorage: Enviar clave
+    DataStorage -> DAO: generar informe
+    DAO -> B.D: Guardar informe
+    B.D --> DAO: Error de guardado
+    DAO --> DataStorage: Enviar error
+    DataStorage --> Controller: Regresar error
+    Controller --> View: print("no se genero el informe")
+    View --> App: Reiniciar proceso
+end
+
+@enduml
