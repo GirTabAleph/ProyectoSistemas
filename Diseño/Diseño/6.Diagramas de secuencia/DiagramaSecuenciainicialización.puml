@@ -1,28 +1,29 @@
 @startuml
 
-Usuario -> LectorNFC: getService(Lector)
-activate LectorNFC
-LectorNFC -> DataSoruce: getService(Lector)
-activate DataSoruce
-DataSoruce --> LectorNFC: null
-deactivate DataSoruce
-LectorNFC -> DAO: initialization
-activate DAO
-DAO -> DataStorage: initialization
-deactivate DAO
-activate DataStorage
-DataStorage--> LectorNFC: Lector object
-deactivate DataStorage
-LectorNFC --> Usuario: Lector object
-deactivate LectorNFC
+App -> Controller: initialization
+activate Controller
+Controller -> Lector: getService(Lector)
+activate Lector
+Lector -> S.O. : getService(Lector)
+activate S.O.
+S.O. --> Lector: null
+deactivate S.O.
+Lector --> Controller: Lector object
+deactivate Lector
+Controller --> App: Lector Object
+deactivate Controller
 
-Usuario -> LectorNFC: getService(Lector)
-activate LectorNFC
-LectorNFC -> DAO: getService(Lector)
-activate DAO
-DAO --> LectorNFC: Lector object
-deactivate DAO
-LectorNFC --> Usuario: Lector object
-deactivate LectorNFC
+App -> Controller: initialization
+activate Controller
+Controller -> Lector: getService(Lector)
+activate Lector
+Lector -> S.O.: getService(Lector)
+activate S.O.
+S.O. --> Lector: Lector object
+deactivate S.O.
+Lector --> Controller: Lector object
+deactivate Lector
+Controller --> App: Lector Object
+deactivate Controller
 
 @enduml
