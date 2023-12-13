@@ -1,4 +1,4 @@
-|Defincion|Referencia|
+|Definción|Referencia|
 |---------|---------|
 | .md | ¿Qué son los archivos MD? (s/f). online-convert.com. Recuperado el 13 de diciembre de 2023, de https://www.online-convert.com/es/formato-de-archivo/md |
 | Android 12 | Wikipedia contributors. (s/f). Android 12. Wikipedia, The Free Encyclopedia. https://es.wikipedia.org/w/index.php?title=Android_12&oldid=155240588 |
