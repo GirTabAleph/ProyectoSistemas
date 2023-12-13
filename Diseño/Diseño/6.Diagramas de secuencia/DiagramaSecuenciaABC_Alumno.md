@@ -1,6 +1,6 @@
 # **Diagrama de secuencia de Alta, Baja y Cambio de Alumno (V1).**
 
-Este diagrama representa la secuencia del proceso de una alta, baja y cambio de un alumno, tambien mostrara casos en donde
+Este diagrama representa la secuencia del proceso de una alta, baja y cambio de un alumno, también mostrará casos en donde
 el proceso no sea exitoso.
 
 Este diagrama se presento en cuatro imagenes en donde se mostrara una vista general de su estrutura, mostrando su estructura original del diagrama, debido a su tamaño no se puede visualizar el diagrama a detalle, por lo tanto se ha dividido en tres partes, proporcionando una vista mas detallada y comoda.
