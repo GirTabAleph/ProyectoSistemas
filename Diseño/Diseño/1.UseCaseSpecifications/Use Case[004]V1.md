@@ -14,9 +14,9 @@ Profesor : Es el responsable de gestionar y verificar los datos de los alumnos a
 
 Alumnos : Es aquel que está inscrito en las materias del profesor 
 
-**Breve Descripción:** En este caso de uso se describe cómo el "profesor" modifica los datos del "alumno" en la aplicacion.
+**Breve Descripción:** En este caso de uso se describe cómo el "profesor" modifica los datos del "alumno" en la aplicación.
 
-**Precondiciones:** El "alumno" debe de estar registrado en la aplicacion del "profesor". 
+**Precondiciones:** El "alumno" debe de estar registrado en la aplicación del "profesor". 
 
 **Flujo básico de eventos:**
  
