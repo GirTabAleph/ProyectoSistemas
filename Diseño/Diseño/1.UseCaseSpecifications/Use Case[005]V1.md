@@ -28,7 +28,7 @@ Los grupos de dichas materias deben de tener claves asignadas.
  
 En caso de que en el paso 3 del flujo principal, el número ingresado ya exista en la aplicación, entonces:
 
-4.   El sistema mostrará un mensaje de error que el grupo ya existe 
+4.   La aplicación mostrará un mensaje de error que el grupo ya existe 
 5.   El caso de uso se reanuda en el paso 3 del flujo principal.
 
 En caso de que en el paso 4 del flujo principal, la aplicación no confirme la creación del grupo, entonces: 
