@@ -1,4 +1,6 @@
 
+# **Diagrama de casos de uso (V2).**
+
 Este apartado contiene el diagrama de casos de uso [001-008], en este mismo directorio esta el archivo en formato .puml 
 para realizar futuras correcciones en caso de ser necesario. 
 
