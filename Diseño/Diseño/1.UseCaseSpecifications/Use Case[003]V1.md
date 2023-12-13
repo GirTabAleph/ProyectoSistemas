@@ -41,6 +41,10 @@
 
 E1 (F P): La aplicacion solo permitirá al "profesor" dar de baja 
 
+E2 (F P): La aplicacion no encuentra al alumno.
+
+E3 (F P): La aplicacion no mandara el aviso hasta que se carguen los datos.
+
 **Post Condiciones** 
 
 1. El "alumno" ha sido dado de baja de la aplicacion y su registro ya no está disponible en la aplicacion.
