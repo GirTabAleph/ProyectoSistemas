@@ -9,7 +9,7 @@
 
 **Tipo de Caso de Uso**: Esencial
 
-**Stakeholders y Interesados**
+**Stakeholders e Interesados**
 
 Profesor : Es el responsable de gestionar y verificar los datos de los alumnos así como sus asistencias 
 
