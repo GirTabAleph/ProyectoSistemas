@@ -15,7 +15,7 @@ Alumnos : Es aquel que está inscrito en las materias del profesor
 
 **Breve Descripción**: En este caso de uso se describe cómo el "Profesor" da de baja a un "alumno" en la aplicacion de asistencia. 
 
-**Preecondiciones**: El "alumno" debe de estar registrado en la aplicacion de asistencias del "profesor".
+**Precondiciones**: El "alumno" debe de estar registrado en la aplicacion de asistencias del "profesor".
 
 **Flujo básico de eventos**:
  
@@ -23,11 +23,11 @@ Alumnos : Es aquel que está inscrito en las materias del profesor
 
 2.	El "profesor" selecciona la opción para dar de baja a un "alumno".
 
-3.	La aplicacion solicita el nombre y número de cuenta del "alumno". 	
+3.	La aplicación solicita el nombre y número de cuenta del "alumno". 	
 
-4.  La aplicacion mostrará un mensaje de advertencia. 
+4.  La aplicación mostrará un mensaje de advertencia. 
 
-5. 	La aplicacion mostrará un mensaje de baja exitoso.
+5. 	La aplicación mostrará un mensaje de baja exitoso.
  	
 
 **Flujo alternativo** 
