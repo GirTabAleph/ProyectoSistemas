@@ -1,6 +1,11 @@
 @startuml
 'Este archivo contiene el código necesario para generar el diagrama de clases del sistema.
 
+'Dado que libnfc es una biblioteca ya existente, el paquete es el mejor elemento que se le ajusta.
+'Para efectos prácticos basta con dejar solo el nombre de la biblioteca.
+package libnfc <<folder>>{
+}
+
 'Un módulo para raspberry pi tiene estos tres modos. Los tomaremos como referencia.
 enum TipoDeLectura{
 
@@ -46,6 +51,8 @@ long idNFC
 
 }
 
+interface Model{
+}
 
 #interface DataStorage{
 Ubicacion local
@@ -60,10 +67,6 @@ write(Grupo)
 
 }
 
-'Dado que libnfc es una biblioteca ya existente, el paquete es el mejor elemento que se le ajusta.
-'Para efectos prácticos basta con dejar solo el nombre de la biblioteca.
-package libnfc <<folder>>{
-}
 
 class Tarjeta{ 
 
@@ -170,41 +173,48 @@ Grupo[] grupos
 }
 
 'Relaciones.
-TipoDeLectura <-- ILectorTarjeta
-
-Tarjeta ..|> ITarjeta
-LectorTarjeta ..|> ILectorTarjeta
-
-
-'Para este sistema un alumno solo puede tener una tarjeta a menos que deba hacer el reemplazo.
-Alumno -- Tarjeta: 1
-
-Alumno - DatosAlumnoParaReporte
+libnfc <. LectorTarjeta
 
 Tarjeta -- LectorTarjeta
 
-Profesor --|> Persona
-Alumno --|> Persona
+TipoDeLectura <- ILectorTarjeta
 
-'Un cambio en la clase grupo afecta a la clase reporte, por eso es una dependencia.
-Grupo <.. Informe
-
-Alumno --o Grupo: 1 .. *
-
-libnfc <. LectorTarjeta
+LectorTarjeta ..|> ILectorTarjeta
+Tarjeta ..|> ITarjeta
 
 SistemaAsistencias ---> Temporalidad
 SistemaAsistencias ---> Formato
 
-SistemaAsistencias .> Alumno
-SistemaAsistencias .> Grupo
+SistemaAsistencias ..> Alumno
+SistemaAsistencias ..> Grupo
 SistemaAsistencias -- Informe
+
+Alumno - DatosAlumnoParaReporte
+Alumno --|> Model
+
+'Para este sistema un alumno solo puede tener una tarjeta a menos que deba hacer el reemplazo.
+Alumno -- Tarjeta: 1
+
+'Un cambio en la clase grupo afecta a la clase reporte, por eso es una dependencia.
+Grupo <.. Informe
+
+DAO_Alumno .> Alumno
+DAO_Grupo .> Grupo
+Alumno ---o Grupo: 1 .. *
+Grupo -|> Model
+DAO_Informe .> Informe
+Informe -- DataStorage
 
 'Un cambio en DataStorage cambia el funcionamiento de los DAOs. Además deben implementar a IDataStorage
 DAO_Alumno ...|> DataStorage
 DAO_Grupo ...|> DataStorage
 DAO_Informe ...|> DataStorage
 
-Informe - DataStorage
-Informe - Alumno
+Alumno --- Informe
+
+Profesor --|> Persona
+Alumno --|> Persona
+
+Informe -|> Model
+
 @enduml
