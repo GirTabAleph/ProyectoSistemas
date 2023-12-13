@@ -41,7 +41,7 @@ Alumnos : Es aquel que está inscrito en las materias del profesor
 
 E1 (F P): La aplicacion solo permitirá al "profesor" dar de baja 
 
-E2 (F P): La aplicacion no encuentra al alumno.
+E2 (F P): La aplicacion no encuentra al "alumno".
 
 E3 (F P): La aplicacion no mandara el aviso hasta que se carguen los datos.
 
