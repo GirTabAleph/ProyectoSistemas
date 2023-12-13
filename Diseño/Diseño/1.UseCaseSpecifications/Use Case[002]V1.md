@@ -44,7 +44,7 @@ El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de 
 
 **Excepciones**
  
-E1 (F P): El Celular del Profresor no es compatible con la aplicación.
+E1 (F P): El Celular del Profesor no es compatible con la aplicación.
 
 E2 (F P): El numero de cuenta del alumno solo debe de contener números.
 
