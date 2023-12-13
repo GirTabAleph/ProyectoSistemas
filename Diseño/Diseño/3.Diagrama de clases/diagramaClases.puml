@@ -49,32 +49,30 @@ long idNFC
 
 }
 
-'Dado que libnfc es una biblioteca ya existente, el paquete es el mejor elemento que se le ajusta.
-'Para efectos prácticos basta con dejar solo el nombre de la biblioteca.
-package libnfc <<folder>>{
-
-
-}
-
-'Esta clase técnicamente es protegida porque solo ciertas clases pueden acceder a ella, no todas las clases deben accederla.
-class Tarjeta{ 
-
-ITarjeta Tarjeta
-
-
-}
 
 #interface DataStorage{
+Ubicacion local
 
 'Toda esta interfaz es únicamente de métodos.
 read() : Alumno
 read() : Informe
+read() : Grupo
 write(Alumno)
 write(Informe)
+write(Grupo)
 
 }
 
+'Dado que libnfc es una biblioteca ya existente, el paquete es el mejor elemento que se le ajusta.
+'Para efectos prácticos basta con dejar solo el nombre de la biblioteca.
+package libnfc <<folder>>{
+}
 
+class Tarjeta{ 
+
+ITarjeta Tarjeta
+
+}
 
 +class LectorTarjeta{
 
@@ -98,23 +96,18 @@ int numeroMatricula
 Tarjeta tarjetaAsociada
 Grupo Grupos[]
 
-'Métodos.
-
-
 } 
 
 +class Profesor{
 
 int numGruposAsociados
-int claveProfesor
 
 'Métodos.
 AltaAlumno(Alumno)
-BajaAlumno()
+BajaAlumno(Alumno)
 CambioAlumno(Alumno)
 AltaGrupo(Grupo)
-BajaGrupo()
-CambioGrupo(Grupo)
+BajaGrupo(Grupo)
 
 }
 
@@ -135,6 +128,34 @@ AccederAInforme()
 RegistrarAsistenciaAlumno()
 GenerarInformePorTiempo(Temporalidad)
 ExportarInforme(Formato)
+
+}
+
+#class DAO_Alumno{
+
+'El DAO es exclusivamente métodos.
+
+sendAlumnoDataToStorage(Alumno)
+search(Alumno) : Alumno
+update(Alumno) : Alumno
+deleteAlumnoFromStorage(Alumno)
+
+}
+
+#class DAO_Grupo{
+
+sendGrupoDataToStorage(Grupo)
+search(Grupo) : Grupo
+update(Grupo) : Grupo
+deleteGrupoFromStorage(Grupo)
+
+}
+
+#class DAO_Informe{
+
+writeDataInforme() : Informe
+deleteCurrentInforme(Informe)
+updateCurrentInforme(Informe) : Informe
 
 }
 
@@ -177,6 +198,11 @@ SistemaAsistencias ---> Formato
 SistemaAsistencias .> Alumno
 SistemaAsistencias .> Grupo
 SistemaAsistencias -- Informe
+
+'Un cambio en DataStorage cambia el funcionamiento de los DAOs.
+DAO_Alumno ...> DataStorage
+DAO_Grupo ...> DataStorage
+DAO_Informe ...> DataStorage
 
 Informe - DataStorage
 Informe - Alumno
