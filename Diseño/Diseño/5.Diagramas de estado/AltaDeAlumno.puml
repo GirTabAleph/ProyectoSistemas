@@ -1,0 +1,28 @@
+@startuml
+
+[*] --> IniciandoAplicativo
+
+    IniciandoAplicativo --> Ready: Verificando funcionamiento
+
+    Ready --> EsperandoDatos: Seleccionar alta
+    
+    EsperandoDatos --> Leyendo: Ingresar datos
+
+    Leyendo --> ValidandoDatos: verificando datos
+    
+    ValidandoDatos --> Error: error de validacion
+    
+    ValidandoDatos --> Registrado: datos validados
+    
+    Error --> Ready: Reiniciar
+    
+    state c <<choice>>
+    
+    Registrado --> c: Seleccionar opcion
+    
+    c --> [*]: Fin proceso
+    
+    c --> Ready: Nueva alta
+
+
+@enduml
