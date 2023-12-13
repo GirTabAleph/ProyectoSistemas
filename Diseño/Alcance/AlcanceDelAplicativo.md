@@ -9,4 +9,4 @@ Para comprender mejor el alcance debemos ver qué limitaciones tiene el aplicati
 + No se cuenta con alguna medida para recuperar los datos.
 + Es de uso local para la Facultad de Contaduría y Administración .
 + No cuenta con acceso a internet.
-+ No se distribuirá en plataformas de distribución de aplicaciones pues es para uso exclusivo de la Facultad en la carrera de Informática.
++ No se será distribuido en plataformas de distribución de aplicaciones, pues es para uso exclusivo de la Facultad en la carrera de Informática.
