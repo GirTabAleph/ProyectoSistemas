@@ -2,34 +2,39 @@
 
 alt Lectura Correcta
 
-    Usuario -> App: Selecionar Leer NFC
-    App --> Usuario: Solicitar NFC
-    Usuario -> App: Pasar tarjeta con NFC
-    App -> DataSource: Recibir NFC
-    DataSource -> DAO: Validar NFC
-    DAO -> DataStorage: Verificar NFC
-    DataStorage --> DAO: Verificado
-    DAO --> DataSource: Validado
-    DataSource --> App: Lectura Correcta
-    App --> Usuario: Exito
+    App -> View: Acercar NFC
+    View -> Controller: Leer NFC
+    Controller -> DataStorage: Recibe NFC
+    DataStorage -> DAO: Enivar NFC
+    DAO -> B.D: Verificar NFC
+    B.D --> DAO: Validado
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Exito
+    Controller --> View: Lectura exitosa
+    View --> App: Reiniciar proceso
 
 else NFC erroneo
 
-    Usuario -> App: Selecionar Leer NF
-    App -> DataSource: Recibir NFC
-    DataSource -> DAO: Validar NFC
-    DAO -> DataStorage: Verificar NFC
-    DataStorage --> DAO: NFC no encontrado
-    DAO --> App: Error NFC
-    App --> Usuario: NFC invalido
+    App -> View: Acercar NFC
+    View -> Controller: Leer NFC
+    Controller -> DataStorage: Recibe NFC
+    DataStorage -> DAO: Enivar NFC
+    DAO -> B.D: Verificar NFC
+    B.D --> DAO: Error de busqueda
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Error
+    Controller --> View: NFC no valido
+    View --> App: Reiniciar proceso
 
 else Lector no funcional
 
-    Usuario -> App: Selecionar Leer NFC
-    App -> DataSource: Recibir NFC
-    DataSource -> DAO: Error de Lectura
-    DAO --> App: Mostrar Error 
-    App --> Usuario: Error en Lector NFC 
+    App -> View: Acercar NFC
+    View -> Controller: Leer NFC
+    Controller -> DataStorage: Error en Lector
+    DataStorage --> Controller: Error
+    Controller --> View: Lector no disponible
+    View --> App: Fin de proceso
+
 end
 
 @enduml
