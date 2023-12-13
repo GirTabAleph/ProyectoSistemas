@@ -1,5 +1,6 @@
 |Defincion|Referencia|
 |---------|---------|
+| Android 12 | Wikipedia contributors. (s/f). Android 12. Wikipedia, The Free Encyclopedia. https://es.wikipedia.org/w/index.php?title=Android_12&oldid=155240588 |
 |Tarjeta de "Movilidad Integrada"|WikiFandom(s. f.). Tarjeta de movilidad integrada. Wiki Transporte Público MX. https://transportepublicomx.fandom.com/es/wiki/Tarjeta_de_Movilidad_Integrada |
 |Near Field Communication o NFC|Descripción general de la Comunicación de Campo Cercano (NFC). (s. f.). Android Developers. https://developer.android.com/develop/connectivity/nfc?hl=es-419|
 | CSV | López, P. (2020, junio 29). ¿Qué es un archivo CSV y para qué sirve? GEEKNETIC. https://www.geeknetic.es/Archivo-CSV/que-es-y-para-que-sirve |
