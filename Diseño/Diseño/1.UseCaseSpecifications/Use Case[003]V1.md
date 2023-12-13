@@ -35,7 +35,7 @@ Alumnos : Es aquel que está inscrito en las materias del profesor
  3. La aplicación solicita el nombre y número de cuenta del "alumno", Si la aplicación no encuentra al "alumno", entonces:
  
  4. La aplicación mostrara un mensaje de error
- 5. Se reaunda el caso de uso en el flujo 3.
+ 5. Se reanuda el caso de uso en el flujo 3.
 
 **Excepciones**
 
