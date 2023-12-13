@@ -10,6 +10,6 @@
 | Near Field Communication o NFC  | Es una tecnología de conectividad inalámbrica de corto alcance que utiliza la inducción de campos magnéticos para permitir la comunicación entre dispositivos cuando se tocan o se acercan a unos pocos centímetros entre sí. |
 | Número de Matricula | Es un número de cuenta proporcionado por la UNAM, generalmente se refiere a un identificador único asignado a un estudiante para propósitos administrativos y de registro. Este número de cuenta puede ser utilizado para rastrear la información académica del estudiante a lo largo de su tiempo en la institución educativa. |
 | PDF | PDF significa Portable Document Format (Formato Portátil de Documento), usado para mostrar documentos en la forma electrónica independiente del software, hardware o sistema operativo donde se visualiza. | 
-| Tarjeta "Movilidad Integrada"  | La Tarjeta de movilidad integrada o tambien conocida como Tarjeta MI  es una tarjeta de plástico que funciona para acceder a la mayoria del transporte público de la Ciudad De México. Esta funciona a traves de Tecnologia NFC. |
+| Tarjeta "Movilidad Integrada"  | La Tarjeta de movilidad integrada o tambien conocida como Tarjeta MI  es una tarjeta de plástico que funciona para acceder a la mayoría del transporte público de la Ciudad De México. Esta funciona a través de la Tecnología NFC. |
 | XLS | Es un formato de archivo utilizado para almacenar hojas de cálculo de Microsoft Excel. |
 | XLSX | Es un formato de archivo basado en XML y habilitado para macros de Excel 2007 a 2013.| 
