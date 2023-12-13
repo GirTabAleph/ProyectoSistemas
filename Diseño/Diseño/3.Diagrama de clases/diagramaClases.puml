@@ -30,18 +30,12 @@ PDF
 
 }
 
-enum DatosAlumnoParaReporte{
-
-GRUPO
-PERIODO_CURSADO
-NUM_ASISTENCIAS
-NUM_FALTAS
-
-}
 
 interface ILectorTarjeta{
 
 TipoDeLectura TipoActual
+
+LeerNFCTarjeta()
 
 }
 
@@ -54,29 +48,25 @@ long idNFC
 interface Model{
 }
 
-#interface DataStorage{
-Ubicacion local
+#interface IDataStorage{
 
 'Toda esta interfaz es únicamente de métodos.
-read() : Alumno
-read() : Informe
-read() : Grupo
-write(Alumno)
-write(Informe)
-write(Grupo)
+read() : Model
+write(Model)
+
 
 }
 
 
 class Tarjeta{ 
 
-ITarjeta Tarjeta
+long idNFC
 
 }
 
 +class LectorTarjeta{
 
-tipoDeLectura tipoActual
+TipoDeLectura tipoActual
 
 'Métodos.
 LeerNFCTarjeta()
@@ -92,15 +82,13 @@ String nombre
 +class Alumno{
 
 DatosAlumnoParaReporte datos
-int numeroMatricula
+int numeroCuenta
 Tarjeta tarjetaAsociada
 Grupo Grupos[]
 
 } 
 
 +class Profesor{
-
-int numGruposAsociados
 
 'Métodos.
 AltaAlumno(Alumno)
@@ -166,9 +154,17 @@ updateCurrentInforme(Informe) : Informe
 'Privado porque solo el profesor interactúa con él.
 -class Informe{
 
+Opciones[] opciones
 Alumno[] alumnos
 Grupo[] grupos
 
+}
+
++class Opciones{
+
+int numeroAsistencias
+int numeroFaltas
+Formato formato
 
 }
 
@@ -189,8 +185,9 @@ SistemaAsistencias ..> Alumno
 SistemaAsistencias ..> Grupo
 SistemaAsistencias -- Informe
 
-Alumno - DatosAlumnoParaReporte
-Alumno --|> Model
+Opciones -- Formato
+
+Alumno ..|> Model
 
 'Para este sistema un alumno solo puede tener una tarjeta a menos que deba hacer el reemplazo.
 Alumno -- Tarjeta: 1
@@ -198,23 +195,26 @@ Alumno -- Tarjeta: 1
 'Un cambio en la clase grupo afecta a la clase reporte, por eso es una dependencia.
 Grupo <.. Informe
 
+Grupo --- Alumno
+
+Opciones -- Informe
+
 DAO_Alumno .> Alumno
 DAO_Grupo .> Grupo
 Alumno ---o Grupo: 1 .. *
-Grupo -|> Model
+Grupo .|> Model
 DAO_Informe .> Informe
-Informe -- DataStorage
+Informe -- IDataStorage
 
 'Un cambio en DataStorage cambia el funcionamiento de los DAOs. Además deben implementar a IDataStorage
-DAO_Alumno ...|> DataStorage
-DAO_Grupo ...|> DataStorage
-DAO_Informe ...|> DataStorage
+DAO_Alumno ...|> IDataStorage
+DAO_Grupo ...|> IDataStorage
+DAO_Informe ...|> IDataStorage
 
 Alumno --- Informe
 
 Profesor --|> Persona
 Alumno --|> Persona
 
-Informe -|> Model
-
+Informe .|> Model
 @enduml
