@@ -19,7 +19,7 @@ Alumnos : Es aquel que se inscribe a las materias del profesor
 
 En este caso de uso se describe cómo el "profesor" da de alta a un alumno para el registro de asistencias
 
-**Preecondiciones**: 
+**Precondiciones**: 
 
 El "alumno" debe contar con su "Tarjeta de Movilidad Integrada" de la Ciudad de México  
 
