@@ -8,6 +8,6 @@ informática. Por ultimo al ser la primera version el aplicativo no cuenta con u
 Para comprender mejor el alcance debemos ver que limitaciones tiene el aplicativo: 
 + Uso exclusivo para dispositivos android 
 + No se cuenta con alguna medida para recuperar los datos
-+ Es de uso local para la facultad de contaduría y administración 
++ Es de uso local para la Facultad de Contaduría y Administración 
 + No cuenta con acceso a internet
 + No se distribuirá en tiendas es para uso exclusivo de la facultad en la carrera de informática.
