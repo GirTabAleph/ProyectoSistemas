@@ -1,6 +1,7 @@
 | Concepto  | Definición|
 | ------------- | ------------- |
 | .md | Markdown son archivos de texto, se utilizan para escribir documentación también en texto sin formato por lo que pueden convertirse a formato HTML. |
+| .puml | Es un archivo de texto que contiene un diagrama UML (Lenguaje Unificado de Modelado) en un formato basado en texto. UML es un lenguaje de modelado estandarizado que permite a los desarrolladores especificar, visualizar, construir y documentar artefactos de un sistema de software1, se puede convertir en una imagen usando una herramienta como PlantUML. |
 | Android 12 | Android 12 es la duodécima versión principal y la decimonovena versión de Android, el sistema operativo móvil desarrollado por Open Handset Alliance liderada por Google.​ |
 | CAAS | Computer Aided Attendance System |
 | Clave | Se refiere a un código numérico único proporcionado por la UNAM que identifica de manera específica a una asignatura dentro de un sistema académico. |
