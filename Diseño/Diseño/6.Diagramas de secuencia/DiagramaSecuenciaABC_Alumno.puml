@@ -4,29 +4,34 @@
 
 alt Registro de alumno
 
-    Usuario -> App: Seleccionar alta
-    App --> Usuario: Solicitar datos
-    Usuario -> App: Ingresar datos
-    App -> DataSource: Sensor
-    DataSource -> DAO: Insertar 
-    DAO --> DataStorage: Guardar
-    DataStorage --> DAO: Guardado exitoso
-    DAO --> DataSource: Confirmar
-    DataSource --> App: Datos guardados
-    App --> Usuario: Fin de proceso
+    App -> View: Seleccionar alta
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Guardar
+    B.D --> DAO: Guardado Exitoso
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Exito
+    Controller --> View: Registro exitoso
+    View --> App: Fin de proceso
+    
 
 else Alumno ya registrado en sistema
 
-    Usuario -> App: Seleccionar alta
-    App --> Usuario: Solicitar datos
-    Usuario -> App: Ingresar datos
-    App -> DataSource: Sensor
-    DataSource -> DAO: Insertar 
-    DAO --> DataStorage: Guardar
-    DataStorage --> DAO: Alumno ya registrado
-    DAO --> DataSource: Advertencia
-    DataSource --> App: Mostrar Advertencia
-    App --> Usuario: Reiniciar proceso
+    App -> View: Seleccionar alta
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Guardar
+    B.D --> DAO: Error de registro
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Error
+    Controller --> View: Alumno ya registrado en B.D
+    View --> App: Reiniciar proceso
 
 end
 
@@ -34,73 +39,82 @@ end
 
 alt Baja de alumno exitoso
 
-    Usuario -> App: Seleccionar baja
-    App --> Usuario: Solicitar datos
-    Usuario -> App: Ingresar datos
-    App -> DataSource: Sensor
-    DataSource -> DAO: Validar
-    DAO --> DataStorage: Verficar Datos
-    DataStorage --> DAO: Encontrado y Eliminado
-    DAO --> DataSource: Exito al eliminar
-    DataSource --> App: Eliminado
-    App --> Usuario: Fin de proceso
-
+    App -> View: Seleccionar baja
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Verificar datos
+    DAO -> B.D: Validar datos
+    B.D --> DAO: Alumno eliminado
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Exito
+    Controller --> View: Eliminación exitoso
+    View --> App: Fin de proceso
+    
 else Alumno no encontrado
 
-    Usuario -> App: Seleccionar baja
-    App --> Usuario: Solicitar datos
-    Usuario -> App: Ingresar datos
-    App -> DataSource: Sensor
-    DataSource -> DAO: Validar
-    DAO --> DataStorage: Verfica Datos
-    DataStorage --> DAO: Error de busqueda
-    DAO --> DataSource: Alumno no encontrado
-    DataSource --> App: Enviar error
-    App --> Usuario: Reiniciar proceso
-
-
+    App -> View: Seleccionar baja
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Verificar datos
+    DAO -> B.D: Validar datos
+    B.D --> DAO: Error de busqueda
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Enviar error
+    Controller --> View: Alumno no encontrado
+    View --> App: Reiniciar proceso
+    
 end
 
 == Cambios Alumnos ==
 
 alt Cambio de datos exitoso
 
-    Usuario -> App: Seleccionar Cambios
-    App --> Usuario: Solicitar datos
-    Usuario -> App: Ingresar datos
-    App -> DataSource: Sensor
-    DataSource -> DAO: Sobreescribir datos
-    DAO --> DataStorage: Cuardar
-    DataStorage --> DAO: Guardado exitoso
-    DAO --> DataSource: Exito al sobreescribir
-    DataSource --> App: Datos guardados
-    App --> Usuario: Fin de proceso
+    App -> View: Seleccionar cambio
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Sobreescribir
+    B.D --> DAO: Guardado exitoso
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Exito
+    Controller --> View: Cambio exitoso
+    View --> App: Fin de proceso
 
 else Alumno no encontrado
 
-    Usuario -> App: Seleccionar Cambios
-    App --> Usuario: Solicitar datos
-    Usuario -> App: Ingresar datos
-    App -> DataSource: Sensor
-    DataSource -> DAO: Sobreescribir datos 
-    DAO --> DataStorage:Guardar
-    DataStorage --> DAO: Error de Busqueda
-    DAO --> DataSource: Alumno no encontrado  
-    DataSource --> App: Datos erroneos
-    App --> Usuario: Reiniciar proceso
+    App -> View: Seleccionar cambio
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Sobreescribir
+    B.D --> DAO: Error de busqueda
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Error
+    Controller --> View: Alumno no encontrado
+    View --> App: Reiniciar proceso
 
 else Datos repetidos
 
-    Usuario -> App: Seleccionar Cambios
-    App --> Usuario: Solicitar datos
-    Usuario -> App: Ingresar datos
-    App -> DataSource: Sensor
-    DataSource -> DAO: Sobreescribir datos
-    DAO --> DataStorage: Cuardar
-    DataStorage --> DAO: Datos repetidos
-    DAO --> DataSource: Error al guardar
-    DataSource --> App: Datos nos disponibles
-    App --> Usuario: Reiniciar proceso
+    App -> View: Seleccionar cambio
+    View -> Controller: Enviar solicitud
+    Controller --> View: Solicitar datos
+    View -> Controller: Recibir datos
+    Controller -> DataStorage: Enviar datos
+    DataStorage -> DAO: Insertar
+    DAO -> B.D: Sobreescribir
+    B.D --> DAO: Error al guardar
+    DAO --> DataStorage: Enviar respuesta
+    DataStorage --> Controller: Error
+    Controller --> View: Alumno con datos iguales
+    View --> App: Reiniciar proceso
 
 end
 
