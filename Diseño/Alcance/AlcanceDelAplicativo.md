@@ -4,7 +4,7 @@ El aplicativo al estar pensado para uso local no contará con acceso a internet 
 
 ## Limitaciones 
 
-Para comprender mejor el alcance debemos ver que limitaciones tiene el aplicativo: 
+Para comprender mejor el alcance debemos ver qué limitaciones tiene el aplicativo: 
 + Uso exclusivo para dispositivos Android 
 + No se cuenta con alguna medida para recuperar los datos
 + Es de uso local para la Facultad de Contaduría y Administración 
