@@ -40,7 +40,6 @@ En caso de que en el paso 4 del flujo principal, la aplicación no confirme la c
 **Excepciones**
 
 E1 (F P): El número de grupo no deberá de exceder los cuatro dígitos permitidos.  
-E2 (F P): La aplicación no se encuentra disponible por fallas de red.
 
   
 **Post Condiciones**
