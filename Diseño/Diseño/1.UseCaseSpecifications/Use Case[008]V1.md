@@ -36,15 +36,15 @@ En caso de que en el paso 3 del flujo principal, el número ingresado no corresp
 
 **Excepciones**
 
-E1 (F P): Los grupos deben de estar dados de alta.
+* E1 (F P): Los grupos deben de estar dados de alta.
 
-E2 (F P): La clave del grupo solo pueden ser dígitos.
+* E2 (F P): La clave del grupo solo pueden ser dígitos.
 
-E3 (F P): La aplicación solo exporta en formatos: PDF, XLS, XLSX, CSV. 
+* E3 (F P): La aplicación solo exporta en formatos: PDF, XLS, XLSX, CSV. 
 
-E4 (F P): El profesor solo puede generar el informe de asistencias.
+* E4 (F P): El profesor solo puede generar el informe de asistencias.
 
-E5 (F P): La aplicación generará el informe a partir de la primera toma de asistencias, hasta el momento que se solicite. 
+* E5 (F P): La aplicación generará el informe a partir de la primera toma de asistencias, hasta el momento que se solicite. 
   
 **Post Condiciones**
 
