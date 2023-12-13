@@ -1,8 +1,5 @@
 @startuml
-'Este archivo contiene en texto plano el código necesario para generar el diagrama de clases del sistema.
-
-
-'Modificaciones: Se incluyó a libnfc dentro del diagrama.
+'Este archivo contiene el código necesario para generar el diagrama de clases del sistema.
 
 'Un módulo para raspberry pi tiene estos tres modos. Los tomaremos como referencia.
 enum TipoDeLectura{
@@ -133,7 +130,7 @@ ExportarInforme(Formato)
 
 #class DAO_Alumno{
 
-'El DAO es exclusivamente métodos.
+IDataStorage DataStorage
 
 sendAlumnoDataToStorage(Alumno)
 search(Alumno) : Alumno
@@ -144,6 +141,8 @@ deleteAlumnoFromStorage(Alumno)
 
 #class DAO_Grupo{
 
+IDataStorage DataStorage
+
 sendGrupoDataToStorage(Grupo)
 search(Grupo) : Grupo
 update(Grupo) : Grupo
@@ -152,6 +151,8 @@ deleteGrupoFromStorage(Grupo)
 }
 
 #class DAO_Informe{
+
+IDataStorage DataStorage
 
 writeDataInforme() : Informe
 deleteCurrentInforme(Informe)
@@ -172,7 +173,7 @@ Grupo[] grupos
 TipoDeLectura <-- ILectorTarjeta
 
 Tarjeta ..|> ITarjeta
-LectorTarjeta <|.. ILectorTarjeta
+LectorTarjeta ..|> ILectorTarjeta
 
 
 'Para este sistema un alumno solo puede tener una tarjeta a menos que deba hacer el reemplazo.
@@ -199,10 +200,10 @@ SistemaAsistencias .> Alumno
 SistemaAsistencias .> Grupo
 SistemaAsistencias -- Informe
 
-'Un cambio en DataStorage cambia el funcionamiento de los DAOs.
-DAO_Alumno ...> DataStorage
-DAO_Grupo ...> DataStorage
-DAO_Informe ...> DataStorage
+'Un cambio en DataStorage cambia el funcionamiento de los DAOs. Además deben implementar a IDataStorage
+DAO_Alumno ...|> DataStorage
+DAO_Grupo ...|> DataStorage
+DAO_Informe ...|> DataStorage
 
 Informe - DataStorage
 Informe - Alumno
