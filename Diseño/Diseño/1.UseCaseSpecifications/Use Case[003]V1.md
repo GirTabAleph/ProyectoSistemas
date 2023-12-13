@@ -9,9 +9,9 @@
 
 **Stakeholders y Interesados**
 
-**Profesor** : Es el responsable de gestionar y verificar los datos de los alumnos así como sus asistencias 
+Profesor : Es el responsable de gestionar y verificar los datos de los alumnos así como sus asistencias 
 
-**Alumnos** : Es aquel que está inscrito en las materias del profesor 
+Alumnos : Es aquel que está inscrito en las materias del profesor 
 
 **Breve Descripción**: En este caso de uso se describe cómo el "Profesor" da de baja a un "alumno" en la aplicacion de asistencia. 
 
